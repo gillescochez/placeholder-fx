@@ -1,0 +1,92 @@
+/* fading effect */
+.fx-fade .hasPlaceholder:focus + .placeholder,
+.fx-fade .hasPlaceholder[required="required"]:valid + .placeholder {
+	opacity:0;
+}
+
+/* text-indent effect */
+.fx-text-indent .hasPlaceholder.focus + .placeholder,
+.fx-text-indent .hasPlaceholder:focus + .placeholder,
+.fx-text-indent .hasPlaceholder[required="required"]:valid + .placeholder {
+	text-indent:-200px;
+	opacity:1;
+}
+
+/* fx-rotate-x */
+.fx-scale .placeholder,
+.fx-rotate-y .placeholder,
+.fx-rotate-x .placeholder {
+	-webkit-backface-visibility:hidden;
+	-moz-backface-visibility:hidden;
+	-o-backface-visibility:hidden;
+	backface-visibility:hidden;
+	
+	-webkit-transform-origin: 50% 50%;
+	-moz-transform-origin: 50% 50%;
+	-o-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+	
+	background:#f4f4f4;
+}
+.fx-rotate-x .hasPlaceholder.focus + .placeholder,
+.fx-rotate-x .hasPlaceholder:focus + .placeholder,
+.fx-rotate-x .hasPlaceholder[required="required"]:valid + .placeholder {
+	-webkit-transform:rotateX(-180deg);
+	-moz-transform:rotateX(-180deg);
+	-o-transform:rotateX(-180deg);
+	transform:rotateX(-180deg);
+}
+
+/* fx-rotate-y */
+.fx-rotate-y .hasPlaceholder.focus + .placeholder,
+.fx-rotate-y .hasPlaceholder:focus + .placeholder,
+.fx-rotate-y .hasPlaceholder[required="required"]:valid + .placeholder {
+	-webkit-transform:rotateY(-180deg);
+	-moz-transform:rotateY(-180deg);
+	-o-transform:rotateY(-180deg);
+	transform:rotateY(-180deg);
+}
+
+/* dive effects */
+.fx-dive .placeholder {
+	background:#eee;
+}
+.fx-dive .hasPlaceholder.focus + .placeholder,
+.fx-dive .hasPlaceholder:focus + .placeholder,
+.fx-dive .hasPlaceholder[required="required"]:valid + .placeholder {
+	-webkit-transform: translate3d(0, 0, -5000px);
+	-moz-transform: translate3d(0, 0, -5000px);
+	-o-transform: translate3d(0, 0, -5000px);
+	transform: translate3d(0, 0, -5000px);
+	opacity:0;
+}
+
+/* slide effects */
+.fx-slide .placeholder {
+	background:#ededed;
+}
+.fx-slide .hasPlaceholder.focus + .placeholder,
+.fx-slide .hasPlaceholder:focus + .placeholder,
+.fx-slide .hasPlaceholder[required="required"]:valid + .placeholder {
+	-webkit-transform: translate3d(-250px, 0, 0);
+	-moz-transform: translate3d(-250px, 0, 0);
+	-o-transform: translate3d(-2500px, 0, 0);
+	transform: translate3d(-250px, 0, 0);
+}
+
+/* highlight effects */
+.fx-highlight .placeholder {
+	background:#eee;
+}
+.fx-highlight .hasPlaceholder.focus + .placeholder,
+.fx-highlight .hasPlaceholder:focus + .placeholder,
+.fx-highlight .hasPlaceholder[required="required"]:valid + .placeholder {
+	text-indent:-2000px;
+	background:#F1F5CB;
+}
+
+/* EI fallback */
+.filled +.placeholder,
+.focus + .placeholder {
+	visibility:hidden;
+}

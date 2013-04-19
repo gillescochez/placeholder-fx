@@ -1,0 +1,54 @@
+.row {
+	overflow:hidden;
+}
+	.field {
+		background:#fff;
+		position:relative;
+		overflow:hidden;
+		margin-right:5px;
+		float:left;
+		
+		-webkit-perspective:400px;
+		-moz-perspective:400px;
+		-o-perspective:400px;
+		perspective:400px;
+	}
+		.field .placeholder {
+		
+			display:block;
+			padding:6px;
+			color:#aaa;
+			opacity:1;
+			width:200px;
+			overflow:hidden;
+			
+			-webkit-user-select:none;
+			-moz-user-select:none;
+			-ms-user-select:none;
+			user-select:none;
+		
+			/* smooth things up */
+			-webkit-transition:all 1s;
+			-moz-transition:all 1s;
+			-ms-transition:all 1s;
+			-o-transition:all 1s;
+			transition:all 1s;
+		}
+		.field .hasPlaceholder {
+			box-shadow:1px 1px 1px rgba(0,0,0,.3);
+			position:absolute;
+			border:1px solid #ccc;
+			background:transparent;
+			padding:3px 4px;
+			text-indent:2px;
+			z-index:5;
+			width:200px;
+			overflow:hidden;
+		}
+		.field .hasPlaceholder:focus {
+			outline:none;
+		}
+		.field textarea,
+		.field .textareaPlaceholder {
+			height:50px;
+		}

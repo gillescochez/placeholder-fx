@@ -1,0 +1,92 @@
+body,
+input,
+textarea {
+    font-family:verdana;
+    font-size:11px;
+    color:#666; /* evil grey */
+}
+fieldset {
+    border:1px solid #ccc;
+}
+form {
+	background:#f9f9f9;
+}
+.row {
+	overflow:hidden;
+}
+.field {
+	background:#fff;
+    position:relative;
+    margin:0 0 5px 0;
+    overflow:hidden;
+    float:left;
+    -webkit-perspective:400px;
+}
+    .field .placeholder {
+        display:block;
+        padding:6px;
+        color:#aaa;
+        opacity:1;
+        width:200px;
+        overflow:hidden;
+		
+		-webkit-user-select:none;
+		-moz-user-select:none;
+		-ms-user-select:none;
+		user-select:none;
+    
+        /* smooth things up */
+        -webkit-transition:all 1s;
+        -moz-transition:all 1s;
+        -ms-transition:all 1s;
+        -o-transition:all 1s;
+        transition:all 1s;
+    }
+    .field .hasPlaceholder {
+		box-shadow:1px 1px 1px rgba(0,0,0,.3);
+        position:absolute;
+        border:1px solid #ccc;
+        background:transparent;
+        padding:3px;
+        text-indent:2px;
+        z-index:5;
+        width:200px;
+    }
+    .field textarea,
+    .field .textareaPlaceholder {
+        height:50px;
+    }
+	
+	/* fading effect */
+    .fx-fade .hasPlaceholder:focus + .placeholder,
+    .fx-fade .hasPlaceholder[required="required"]:valid + .placeholder {
+        opacity:0;
+    }
+	
+	/* text-indent effect */
+    .fx-text-indent .hasPlaceholder.focus + .placeholder,
+    .fx-text-indent .hasPlaceholder:focus + .placeholder,
+    .fx-text-indent .hasPlaceholder[required="required"]:valid + .placeholder {
+        text-indent:-200px;
+        opacity:1;
+    }
+	
+	/* fx-rotate-x */
+    .fx-rotate-x {
+        -webkit-transform-origin: 50% 0;
+    }
+    .fx-rotate-x .placeholder {
+		-webkit-backface-visibility:hidden;
+    }
+    .fx-rotate-x .hasPlaceholder.focus + .placeholder,
+    .fx-rotate-x .hasPlaceholder:focus + .placeholder,
+    .fx-rotate-x .hasPlaceholder[required="required"]:valid + .placeholder {
+        -webkit-transform:rotateX(-180deg);
+        opacity:1;
+    }
+	
+	/* EI fallback */
+    .filled +.placeholder,
+	.focus + .placeholder {
+		visibility:hidden;
+	}
